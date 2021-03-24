@@ -40,7 +40,11 @@ p {
 }
 
 .next {
-    background: green;
+    background: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
     font-size: calc(10px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
 }
 .next-disabled {
