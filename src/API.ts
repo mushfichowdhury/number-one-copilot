@@ -1,4 +1,4 @@
-import QuestionCard from "./components/QuestionCard";
+// import QuestionCard from "./components/QuestionCard";
 import { shuffleArray } from './utils';
 
 export type Question = {
@@ -6,20 +6,14 @@ export type Question = {
     correct_answer: string;
     difficulty: string;
     incorrect_answers: string[];
-    questions: string;
+    question: string;
     type: string;
 }
 
 export type QuestionState = Question & { answers: string[] };
 
-export enum Difficulty {
-    EASY = "easy",
-    MEDIUM = "medium",
-    HARD = "hard"
-}
-
-export const fetchQuizQuestions = async (amount: number, difficulty: Difficulty) => {
-    const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&category=31&type=multiple`;
+export const fetchQuizQuestions = async (amount: number) => {
+    const endpoint = `https://opentdb.com/api.php?amount=${amount}&category=31`;
     const data = await (await fetch(endpoint)).json();
     return data.results.map((question: Question) => (
         {
