@@ -2,8 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import BGImage from './images/pixelcity.gif';
 
 const colors = {
-    primary: "#000080",
-    secondary: "#ffdb58"
+    primary: "black",
+    secondary: "#fffff"
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -29,7 +29,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-center: center;
-width: 650px;
+width: 90vw;
+max-width: 800px;
 min-height: 400px;
 margin: 0 auto;
 

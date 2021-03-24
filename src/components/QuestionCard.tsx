@@ -3,11 +3,17 @@ import { AnswerObject } from '../App';
 import styled from 'styled-components';
 
 const StyledQuestionCard = styled.div`
+p {
+    font-size: calc(10px + (16 - 12) * ((100vw - 320px) / (1200 - 320)));
+}
+
 .quizheader {
     font-weight: 800;
-    font-size: 22px;
+    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
     padding: 1.5rem 2.5rem;
-    border-bottom: 1px solid $border-color;
+    display: flex;
+    justify-content: center;
+    ailgn-content: center;    
 }
 
 .quizbody {
@@ -17,35 +23,53 @@ const StyledQuestionCard = styled.div`
     grid-gap: 1rem;
     padding: 2.5rem 3.25rem;
     min-height: 140px;
+
+    button {
+        padding: 0.75rem 2rem;
+        border-radius: 0.375rem;
+        color: black;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        font-family: "Cabin", sans-serif;
+        font-size: 1rem;
+        transition: 0.3s all;
+        width: 100%;
+        height: 5vh;
+    }
 }
 
 .next {
     background: green;
+    font-size: calc(10px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
 }
 .next-disabled {
     pointer-events: none;
-    background: grey;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    font-size: calc(10px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
 }
 
 .quizfooter {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
-    grid-template-rows: 50px;
-    gap: 0% 5%;
-    grid-template-areas:
-    "score . question-number next-btn";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px;
 }
 
 .question-number {
-    grid-area: question-number;
 }
 
 .next-btn {
-    grid-area: next-btn;
 }
 
+.score {
+    
+}
 }
 
 `;
@@ -95,7 +119,7 @@ const QuestionCard: React.FC<Props> = ({
             <footer className="quizfooter">
                 {!gameOver ? <p className="score">Score: {score}</p> : null}
                     <p className="question-number">
-                        Question: {questionNumber} / {totalQuestions}
+                        {questionNumber} / {totalQuestions}
                     </p>
                     <div className="next-btn">
                         {!gameOver && !loading && allAnswers.length === number + 1 && number !== totalQuestions - 1 ? (
