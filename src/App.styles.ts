@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from './images/pixelcity.gif';
+import BGImage from './images/sky.jpeg';
 
 const colors = {
     primary: "black",
