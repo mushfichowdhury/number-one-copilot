@@ -7,7 +7,7 @@ p {
 
 .quizheader {
     font-weight: 800;
-    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(34px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
     padding: 1.5rem 2.5rem;
     display: flex;
     justify-content: center;
@@ -19,9 +19,9 @@ p {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 1rem;
-    padding: 2.5rem 3.25rem;
-    min-height: 140px;
-    font-size: calc(10px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
+    padding: 1.5rem 2.5rem;
+    min-height: 100px;
+    overflow: visible;
 }
 
 .next {
@@ -57,7 +57,7 @@ p {
 }
 
 .score {
-    
+    font-weight: 1000;
 }
 }
 
@@ -81,10 +81,10 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
         padding: 0.75rem 2rem;
         border-radius: 0.375rem;
         color: black;
-        font-weight: 700;
+        font-weight: 500;
         border: none;
         cursor: pointer;
-        font-size: 1rem;
+        font-size: calc(10px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
         width: 100%;
         height: 5vh;
         background: ${
