@@ -21,6 +21,7 @@ p {
     grid-gap: 1rem;
     padding: 2.5rem 3.25rem;
     min-height: 140px;
+    font-size: calc(10px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
 }
 
 .next {
