@@ -64,8 +64,8 @@ function App() {
       <Wrapper>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <>
-            <h1>Boku No Anime Academia</h1>
-            <p>Put your anime skills to the test in this intense quiz!</p>
+            <h1>Number One Co-Pilot</h1>
+            <p>Let's see how far you can get!</p>
             <button className="start" onClick={startTrivia}>
                   Start
             </button>
