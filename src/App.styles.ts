@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import BGImage from './images/numberonecopilot-bg.png';
 
 const colors = {
-    primary: "black",
+    primary: "white",
     secondary: "#fffff"
 }
 
@@ -43,7 +43,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 > h1 {
     font-family: 'Yeseva One';
-    text-shadow: 2px 2px lightgrey;
     display: flex;
     flex-direction: row;
     justify-content: center;
