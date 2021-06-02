@@ -1,6 +1,6 @@
-# Boku No Anime Academia
+# Number One Co-Pilot
 
-Hello! Welcome to Boku No Anime Academia, an anime quiz app built with Typescript and React. I created this app in order to test my friends on their anime skills! Take this quiz to see if you're as smart as Deku!
+Hello! Welcome to Number One Co-Pilot, an app built with Typescript and React. I created this app in order to assist passengers in keeping drivers awake and alert during long drives. This idea was born from the road trips my friends and I take every year and all of the different ways we keep each other awake.
 
 ## Author
 
